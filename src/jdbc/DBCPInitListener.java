@@ -43,6 +43,7 @@ public class DBCPInitListener implements ServletContextListener {
      * @see ServletContextListener#contextInitialized(ServletContextEvent)
      */
     public void contextInitialized(ServletContextEvent sce)  { 
+    	// 수정
          String poolConfig = sce.getServletContext().getInitParameter("poolConfig");
          Properties prop = new Properties();
          
