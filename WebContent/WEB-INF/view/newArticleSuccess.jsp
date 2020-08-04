@@ -1,8 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
-<%@ taglib prefix="my" tagdir="/WEB-INF/tags"%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -16,7 +17,9 @@
 <title>Insert title here</title>
 </head>
 <body>
-
-<my:navbar />
+	게시글을 등록했습니다. <br />
+	<a href="${ctxPath }/article/list.do">게시글 목록</a>
+	<a href="${ctxPath }/article/read.do?no=${newArticleNo}">게시글 내용</a>
+	
 </body>
 </html>

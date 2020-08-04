@@ -50,6 +50,7 @@ public class LoginHandler implements CommandHandler{
 		try {
 			User user = loginService.login(id, password);
 			req.getSession().setAttribute("authUser", user);
+//			req.getSession().setAttribute("member", );
 			res.sendRedirect(req.getContextPath()+"/main.jsp");
 			return null;
 		}catch (LoginFailException e) {

@@ -13,10 +13,30 @@
 <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js'></script>
 <script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js'></script>
 <title>회원가입 완료</title>
+<style>
+	.container-fluid {
+		background-color:white;
+		width:400px;
+	}
+	
+	h4 {
+		text-align:center;
+	}
+</style>
 </head>
-<body>
+<body class="bg-light">
 
-${param.name }님, 회원 가입에 성공했습니다.
+<div class="container-fluid shadow p-3">
+   	<form>
+	  	<div class="form-group">
+		    <h4>회원가입 완료.</h2>
+	  	</div>
+	  	<br />
+	  	<br />
+	  	<br />
+ 		<button type="button" class="btn btn-dark btn-lg btn-block" onclick="location='main.jsp'">확인</button>
+	</form>
+</div>
 
 </body>
 </html>
