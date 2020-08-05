@@ -23,6 +23,7 @@
 			<td>${articleData.article.number }</td>
 		</tr>
 		<tr>
+		 
 			<td>작성자</td>
 			<td>${articleData.article.writer.name }</td>
 		</tr>

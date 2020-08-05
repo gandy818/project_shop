@@ -15,11 +15,36 @@
 <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js'></script>
 <script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js'></script>
 <title>Insert title here</title>
+
+<script>
+	$('#myModal').on('shown.bs.modal', function () {
+	  $('#myInput').trigger('focus')
+	})
+</script>
+
 </head>
 <body>
-	게시글을 등록했습니다. <br />
-	<a href="${ctxPath }/article/list.do">게시글 목록</a>
-	<a href="${ctxPath }/article/read.do?no=${newArticleNo}">게시글 내용</a>
-	
+<!-- Modal -->	
+<div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      	
+      
+       	<strong>게시글이 정상적으로 작성되었습니다.</strong> <br />
+		 <br /><br />
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-success">게시글 확인하기</button>
+        <button type="button" class="btn btn-danger">목록으로</button>
+      </div>
+    </div>
+  </div>
+</div>
 </body>
 </html>

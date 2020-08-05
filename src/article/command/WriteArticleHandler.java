@@ -34,7 +34,7 @@ public class WriteArticleHandler implements CommandHandler{
 	
 	private String processSubmit(HttpServletRequest req, HttpServletResponse res) {
 		Map<String, Boolean> errors = new HashMap<>();
-		req.setAttribute("erros", errors);
+		req.setAttribute("errors", errors);
 		
 		User user = (User)req.getSession(false).getAttribute("authUser");
 		WriteRequest writeReq = createWriteRequest(user, req);
@@ -47,7 +47,7 @@ public class WriteArticleHandler implements CommandHandler{
 		int newArticleNo = writeService.write(writeReq);
 		req.setAttribute("newArticleNo", newArticleNo);
 		
-		return "/WEB-INF/view/newArticleSuccess.jsp";
+		return "/WEB-INF/view/newArticleForm.jsp";
 	}
 	
 	private WriteRequest createWriteRequest(User user, HttpServletRequest req) {
