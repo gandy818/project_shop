@@ -14,39 +14,15 @@
 <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js'></script>
 <script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js'></script>
-<title>Insert title here</title>
+<title>삭제</title>
 </head>
 <body>
-<h1>장바구니</h1>
-<table class="table">
-  <thead class="thead-dark">
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">책 이름</th>
-      <th scope="col">수량</th>
-      <th scope="col">가격</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
+ㅁㅇㄴ
+<form action="delete.do?no=${delReq.articleNumber }" method="post">
+암호: <input type="password" name ="password" /> <br />
+<c:if test="${errors.password}">암호를 입력하세요.</c:if>
+<c:if test="${errors.invalidPassword}">암호가 일지차지 않습니다.</c:if>
+<input type="submit" value="삭제" />
+</form>
 </body>
 </html>

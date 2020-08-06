@@ -12,9 +12,9 @@ public class ArticlePage {
 	private int startPage;
 	private int endPage;
 	
-	public ArticlePage(int total, int cuttenPage, int size, List<Article> content) {
+	public ArticlePage(int total, int currentPage, int size, List<Article> content) {
 		this.total = total;
-		this.currentPage = cuttenPage;
+		this.currentPage = currentPage;
 		this.content = content;
 		if(total == 0) {
 			totalPages = 0;

@@ -18,7 +18,7 @@
 	src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js'></script>
 <script
 	src='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js'></script>
-<title>Insert title here</title>
+<title>게시글 작성</title>
 <style>
 .container-fluid {
 	background-color: white;
@@ -45,11 +45,7 @@
 				<textarea name="content" rows="20" cols="200" class="form-control" 
 				placeholder="상품문의 또는 배송문의 사항이 있으시면 자유롭게  남겨주세요.">${param.content }</textarea>
 			</div>
-			<button type="submit" 
-					class="btn btn-dark btn-lg btn-block"
-					data-toggle="modal" 
-					data-target="#staticBackdrop" 
-					height="200">등록</button>
+			<button type="submit" class="btn btn-dark btn-lg btn-block">등록</button>
 	</form>
 </div>
 </body>

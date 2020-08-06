@@ -129,7 +129,7 @@
 							</c:forEach>
 
 							<li class="page-item"><c:if
-									test="${(articlePage.startPage + 5) < (articlePage.totalPages)}">
+									test="${(articlePage.startPage + 5) <= (articlePage.totalPages)}">
 									<a class="page-link"
 										href="list.do?pageNo=${articlePage.startPage + 5}">Next</a>
 								</c:if> <c:if

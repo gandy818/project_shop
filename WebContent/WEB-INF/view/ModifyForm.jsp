@@ -15,35 +15,14 @@
 <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js'></script>
 <script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js'></script>
 <title>Insert title here</title>
-<style>
-	.container-fluid {
-		background-color:white;
-		width:400px;
-	}
-	
-	h1 {
-		text-align:center;
-	}
-	
-	h5 {
-		text-align:center;
-	}
-</style>
 </head>
 <body>
-<body class="bg-light">
-
-<div class="container-fluid shadow p-3">
-	<button type="button" class="btn btn-default" aria-label="Left Align" onclick="location='main.jsp'">
-  		<i class="fas fa-chevron-left"></i>
-	</button>
-<h1>중앙문고</h1>
-<h5>게시글 작성 완료</h5>
-<form action="login.do" method="post">
-		<button type="button" class="btn btn-secondary" 
-				onclick="location.href ='${ctxPath }/article/read.do?no=${newArticleNo}' ">작성 글 확인하기</button>
-	    <button type="button" class="btn btn-secondary" onclick="location.href = '${ctxPath }/article/list.do' ">목록으로</button>
+<form action="modify.do?no=${modReq.articleNumber}" method = "post">
+<p>번호 : <br />${modReq.articleNumber }</p>
+<p>제목 : <br /><input type="text" name = "title" value="${modReq.title }" />
+	<c:if test="${errors.title }">제목을 입력하세요</c:if> </p>
+<p>내용 : <br /> <textarea name="content" rows="5" cols="30"></textarea> </p>
+<input type="submit" value="글 수정" />
 </form>
-</div>
 </body>
 </html>

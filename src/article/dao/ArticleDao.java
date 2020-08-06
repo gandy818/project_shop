@@ -121,4 +121,11 @@ public class ArticleDao {
 			return pstmt.executeUpdate();
 		}
 	}
+	
+	public int delete(Connection conn, int no) throws SQLException {
+		try(PreparedStatement pstmt = conn.prepareStatement("delete from article where article_no = ?")){
+			pstmt.setInt(1, no);
+			return pstmt.executeUpdate();
+		}
+	}
 }
