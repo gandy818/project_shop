@@ -36,7 +36,7 @@
 			
 			<a class="nav-link nav-item ${current.logout }" href="${ctxPath }/logout.do">로그아웃</a>
 			
-			<a class="nav-link nav-item ${current.changePwd }" href="${ctxPath }/changePwd.do">회원정보 수정</a>
+			<a class="nav-link nav-item ${current.changeUser }" href="${ctxPath }/changeUser.do">회원정보 수정</a>
 			
 			<a class="nav-link nav-item ${current.list }" href="${ctxPath }/article/list.do">고객센터</a>
 		</c:if>

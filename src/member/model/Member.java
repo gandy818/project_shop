@@ -54,4 +54,11 @@ public class Member {
 	public boolean matchPassword(String pwd) {
 		return password.contentEquals(pwd);
 	}
+	
+	public void changeUser(String newPwd, String newPhone, String newAddr, String newEmail) {
+		this.password = newPwd;
+		this.phone = newPhone;
+		this.address = newAddr;
+		this.email = newEmail;
+	}
 }
